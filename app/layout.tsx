@@ -22,9 +22,6 @@ export default function RootLayout({
   const isHome = pathname === "/";
   const [isLoading, setIsLoading] = useState(isHome);
   useEffect(()=> {
-    console.log('====================================');
-    console.log(isLoading);
-    console.log('====================================');
   }, [isLoading])
   return (
     <html lang="en">
@@ -34,7 +31,7 @@ export default function RootLayout({
         ) : (
           <>
             <NavBar />
-            <div className="grow">{children}</div>
+              <div className="grow font-[300]">{children}</div>
             <Footer />
           </>
         )}
