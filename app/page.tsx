@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import ContentWrapper from "./components/ContentWrapper";
 
 type Props = {
@@ -55,10 +54,10 @@ export default function Home() {
 
 
 
-      <div className="relative bg-fixed bg-cover bg-[url('/assets/bible_studies.jpg')] min-h-[400px] bg-no-repeat w-full flex items-center justify-center">
+      <div className="relative bg-fixed bg-cover bg-[url('/assets/bible_studies.jpg')] min-h-[400px] bg-no-repeat w-full flex items-center justify-center ">
         <div className="absolute inset-0 bg-black opacity-50"/>
         {/* Dark overlay */}
-        <div className="relative flex flex-col gap-5 text-white z-10 !font-[100] text-center">
+        <div className=" flex flex-col gap-5 text-white z-10 !font-[100] text-center ">
           <h3 className="text-[40px]">JOIN A LIFE GROUP</h3>
           <p className="leading-loose max-w-[700px]  ">
             Our programs serve as the hub for small-group fellowship and
