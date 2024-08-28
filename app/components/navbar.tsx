@@ -27,10 +27,16 @@ export default function NavBar() {
       <div
         className={`${
           scroll ? "bg-black" : "bg-transparent"
-        } fixed top-0 h-[100px] transition duration-500 px-20 flex items-center justify-between w-full text-white z-[100]`}
+        } fixed top-0 h-[100px] transition duration-500 px-10 lg:px-20 flex items-center justify-between w-full text-white z-[100]`}
       >
         <Link href={"/"}>logo</Link>
-        <div className="flex gap-10 text-[20px] font-[300]">
+
+        <div  id="menu-toggle" className="block lg:hidden">
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </div>
+        <div className="lg:flex gap-10 text-[20px] font-[300] hidden">
           {navLinks.map((link) => {
             const isActive = pathname.startsWith(link.href);
             return (

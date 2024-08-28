@@ -15,7 +15,7 @@ export default function Footer() {
                 <div>
                     <h3 className="text-[30px] !font-[100]">Service Time</h3>
                 </div>
-                <div>
+                <div className="hidden">
                     <h3 className="text-[30px] !font-[100]">[Section 4]</h3>
                 </div>
                 
