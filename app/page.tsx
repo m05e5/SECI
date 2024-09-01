@@ -1,22 +1,12 @@
 import { Metadata } from "next";
 import ContentWrapper from "./components/ContentWrapper";
 
-type Props = {
-  params: {
-    productId: string;
+export const generateMetadata = async (): Promise<Metadata> => {
+  return {
+    title: 'SECI',
   };
 };
 
-export const GenerateMetaData = async ({
-  params,
-}: Props): Promise<Metadata> => {
-  const title = await new Promise((test) => {
-    setTimeout(() => {
-      test("test");
-    }, 100);
-  });
-  return { title: `${title}` };
-};
 export default function Home() {
   return (
     <main className=" flex flex-col gap-5">
