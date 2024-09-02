@@ -15,6 +15,18 @@ export default function NavBar() {
     { name: "Contact", href: "/contact" },
   ];
 
+  const locations = [
+    {
+      name: "Cameroon",
+      subLocation: [
+        {name: "Littoral", href: "/"},
+        {name: "Centre", href: "/"},
+        {name: "Ouest", href: "/"},
+        {name: "Sud", href: "/"},
+      ]
+    }
+  ]
+
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -65,10 +77,13 @@ export default function NavBar() {
               className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="py-1">
+                <p className="block px-1 font-bold pt-2 text-[12px] text-gray-700">
+                  Edit
+                </p>
                 <MenuItem>
                   <a
                     href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+                    className="block px-4 py-1 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                   >
                     Edit
                   </a>

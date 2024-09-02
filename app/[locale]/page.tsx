@@ -1,18 +1,16 @@
-import { Metadata } from "next";
-import ContentWrapper from "./components/ContentWrapper";
+"use client"
+import ContentWrapper from "../components/ContentWrapper";
+import { useTranslations } from "use-intl";
 
-export const generateMetadata = async (): Promise<Metadata> => {
-  return {
-    title: 'SECI',
-  };
-};
+
 
 export default function Home() {
+  const t = useTranslations("HomePage")
   return (
     <main className=" flex flex-col gap-5">
       {/* <div className="bg-fill "> */}
       <div className="bg-cover  bg-[url('/assets/bg2.png')] h-[700px] bg-no-repeat w-full  bg-black flex flex-col justify-center   text-white">
-        <ContentWrapper className="flex-col max-w-[700px] gap-10">
+        <ContentWrapper className="flex-col max-w-[700px] gap-10 ">
           <h1 className="text-[50px]">
             We are one in <span className="font-bold">Jesus</span> name
           </h1>
@@ -27,9 +25,9 @@ export default function Home() {
       </div>
 
       <ContentWrapper
-        className={`w-fulljustify-between gap-5 py-24 justify-between`}
+        className={`w-full flex-col md:flex-row gap-5 py-24 justify-between`}
       >
-        <div className="w-5/12 flex flex-col h-full gap-10">
+        <div className="w-full md:w-5/12 flex flex-col h-full gap-10">
           <b>We are</b>
           <p className=" leading-loose">
             Come experience the joy of belonging to a faith community that
@@ -39,7 +37,7 @@ export default function Home() {
             cornerstone of Jesus Christ.
           </p>
         </div>
-        <img className="w-5/12" src={"/assets/rectangle.jpg"} alt="content" />
+        <img className="w-full md:w-5/12" src={"/assets/rectangle.jpg"} alt="content" />
       </ContentWrapper>
 
 
@@ -59,9 +57,9 @@ export default function Home() {
       </div>
 
       <ContentWrapper
-        className={`w-fulljustify-between gap-5 py-10 justify-between`}
+        className={`w-full flex-col md:flex-row gap-5 py-10 justify-between`}
       >
-        <div className="w-5/12 flex flex-col h-full gap-10">
+        <div className="w-full md:w-5/12 flex flex-col h-full gap-10">
           <h3 className="text-[30px] !font-[100]">Visit Us</h3>
           <p className=" leading-loose">
             Come experience the joy of belonging to a faith community that
@@ -71,7 +69,7 @@ export default function Home() {
             cornerstone of Jesus Christ.
           </p>
         </div>
-        <div className="w-5/12 flex flex-col h-full gap-10">
+        <div className="w-full md:w-5/12 flex flex-col h-full gap-10">
           <b>We are</b>
           <p className=" leading-loose">
             Come experience the joy of belonging to a faith community that
