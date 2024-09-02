@@ -1,8 +1,8 @@
 "use client";
-import ContentWrapper from "../components/ContentWrapper";
-import ImagedWrapper from "../components/ImagedWrapper";
+import ContentWrapper from "../../components/ContentWrapper";
+import ImagedWrapper from "../../components/ImagedWrapper";
 // import { APIProvider } from "@vis.gl/react-google-maps";
-import CustomMap from "../components/MapComponent";
+import CustomMap from "../../components/MapComponent";
 
 export default function Contact() {
   return (

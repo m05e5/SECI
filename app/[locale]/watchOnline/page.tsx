@@ -1,6 +1,6 @@
-import ContentWrapper from "../components/ContentWrapper";
-import ImagedWrapper from "../components/ImagedWrapper";
-import BlackButton from "../components/BlackButton";
+import ContentWrapper from "../../components/ContentWrapper";
+import ImagedWrapper from "../../components/ImagedWrapper";
+import BlackButton from "../../components/BlackButton";
 
 export default function watchOnline() {
   return (

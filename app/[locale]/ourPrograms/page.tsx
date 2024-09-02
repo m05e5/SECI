@@ -1,6 +1,6 @@
-import ContentWrapper from "../components/ContentWrapper";
-import ImagedWrapper from "../components/ImagedWrapper";
-import ProgramCard from "../components/ProgramCard";
+import ContentWrapper from "../../components/ContentWrapper";
+import ImagedWrapper from "../../components/ImagedWrapper";
+import ProgramCard from "../../components/ProgramCard";
 
 export default function page() {
   return (

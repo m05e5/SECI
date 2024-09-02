@@ -1,4 +1,4 @@
-import ImagedWrapper from "../components/ImagedWrapper";
+import ImagedWrapper from "../../components/ImagedWrapper";
 
 export default function Events() {
   return (

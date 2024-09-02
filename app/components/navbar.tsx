@@ -1,9 +1,10 @@
-import Link from "next/link";
+
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { useTranslations } from "next-intl";
 import LocalSwitch from "./LocalSwitch";
+import { Link } from "@/i18n/routing";
 
 export default function NavBar() {
   const pathname = usePathname();
