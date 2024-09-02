@@ -1,7 +1,14 @@
 {
+    "NavLinks": {
+        "about": "A props",
+        "ourPrograms": "Nos Programs",
+        "watchOnline": "Live Steams",
+        "contact": "Contact",
+        "events": "Evenements",
+        "locations": "Nos sites"
+    },
     "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page"
+        "title": "Hello world!",
+        "about": "Go to the about page"
     }
-  }
-  
+}

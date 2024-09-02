@@ -2,17 +2,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { useTranslations } from "next-intl";
+import LocalSwitch from "./LocalSwitch";
 
 export default function NavBar() {
   const pathname = usePathname();
-
+  const t = useTranslations("NavLinks")
   const navLinks = [
-    { name: "About", href: "/about" },
-    { name: "Our Programs", href: "/ourPrograms" },
-    { name: "Our Team", href: "/ourTeam" },
-    { name: "Watch Online", href: "/watchOnline"},
-    { name: "Events", href: "/events" },
-    { name: "Contact", href: "/contact" },
+    { name: t('about'), href: "/about" },
+    { name: t('ourPrograms'), href: "/ourPrograms" },
+    { name: "Out Team", href: "/ourTeam" },
+    { name: t('watchOnline'), href: "/watchOnline"},
+    { name: t('events'), href: "/events" },
+    { name: t('contact'), href: "/contact" },
   ];
 
   const locations = [
@@ -65,7 +67,7 @@ export default function NavBar() {
           <Menu as="div" className="relative inline-block text-left">
             <div>
               <MenuButton className="flex items-center gap-2">
-                Locations
+                {t('locations')}
                 <svg className="w-2.5 h-2.5 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                 </svg>
@@ -145,6 +147,7 @@ export default function NavBar() {
               </div>
             </MenuItems>
           </Menu>
+          <LocalSwitch />
         </div>
       </div>
     </div>

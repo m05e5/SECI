@@ -1,6 +1,14 @@
 {
-    "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page"
-    }
+  "NavLinks": {
+    "about": "About",
+    "ourPrograms": "Our Programs",
+    "watchOnline": "Watch Online",
+    "contact": "Contact",
+    "events": "Events",
+    "locations": "Locations"
+  },
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
   }
+}
