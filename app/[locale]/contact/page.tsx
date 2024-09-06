@@ -1,8 +1,11 @@
 "use client";
+import { FaceFrownIcon } from "@heroicons/react/16/solid";
 import ContentWrapper from "../../components/ContentWrapper";
 import ImagedWrapper from "../../components/ImagedWrapper";
 // import { APIProvider } from "@vis.gl/react-google-maps";
 import CustomMap from "../../components/MapComponent";
+import { Facebook, WhatsApp } from "@mui/icons-material";
+import BlackButton from "@/app/components/BlackButton";
 
 export default function Contact() {
   return (
@@ -23,17 +26,33 @@ export default function Contact() {
         </div>
       </ImagedWrapper>
 
-      <ContentWrapper className="border-b border-gray-900/10 py-12 gap-5">
-        <div className="w-4/12">
+      <ContentWrapper className="border-b flex-col md:flex-row border-gray-900/10 py-12 gap-5">
+        <div className="w-full md:w-4/12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">
-            Personal Information
+            Text text text
           </h2>
-          <p className="mt-1 text-sm leading-6 text-gray-600">
-            Use a permanent address where you can receive mail.
-          </p>
+          <div className="mt-1 text-sm leading-6 text-gray-600 flex flex-col gap-3">
+          <p className="">
+            Lorem Ipsu In publishing and graphic design, Lorem ipsum is a
+            placeholder text commonly used to demonstrate the visual form
+
+            </p>
+            <p> you can also contact us directly on</p>
+            <div className="border rounded flex gap-3 items-center p-2 bg-[#dbdfe6b5] font-bold">
+              <WhatsApp className="text-green-600"/>
+              +237 6777777777
+            </div>
+            <div className="border rounded flex gap-3 items-center p-2 bg-[#dbdfe6b5] font-bold">
+              <Facebook className="text-blue-400"/>
+              SECI
+            </div>
+          </div>
+
+
+          
         </div>
 
-        <div className="flex flex-wrap gap-x-6 gap-y-8 w-8/12">
+        <div className="flex flex-wrap gap-x-6 gap-y-8 w-full md:w-8/12">
           <div className="flex-1 sm:flex-[0_0_47%]">
             <label
               htmlFor="first-name"
@@ -127,59 +146,11 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="flex-1 sm:flex-[0_0_30%]">
-            <label
-              htmlFor="city"
-              className="block text-sm font-medium leading-6 text-gray-900"
-            >
-              City
-            </label>
-            <div className="mt-2">
-              <input
-                id="city"
-                name="city"
-                type="text"
-                autoComplete="address-level2"
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
 
-          <div className="flex-1 sm:flex-[0_0_30%]">
-            <label
-              htmlFor="region"
-              className="block text-sm font-medium leading-6 text-gray-900"
-            >
-              State / Province
-            </label>
-            <div className="mt-2">
-              <input
-                id="region"
-                name="region"
-                type="text"
-                autoComplete="address-level1"
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
 
-          <div className="flex-1 sm:flex-[0_0_30%]">
-            <label
-              htmlFor="postal-code"
-              className="block text-sm font-medium leading-6 text-gray-900"
-            >
-              ZIP / Postal code
-            </label>
-            <div className="mt-2">
-              <input
-                id="postal-code"
-                name="postal-code"
-                type="text"
-                autoComplete="postal-code"
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
+
+
+
 
           <div className="w-full">
             <label
@@ -198,9 +169,10 @@ export default function Contact() {
               />
             </div>
             <p className="mt-3 text-sm leading-6 text-gray-600">
-              Write a few sentences about yourself.
+              Tell us whats your concern
             </p>
           </div>
+          <BlackButton widthFull text="Send Message" />
         </div>
       </ContentWrapper>
     </div>

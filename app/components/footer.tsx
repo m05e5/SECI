@@ -12,10 +12,10 @@ export default function Footer() {
                     <h3 className="text-[30px] !font-[100]">Contact Us</h3>
                     <p>Email: info@johndoe.com</p>
                 </div>
-                <div className="hidden">
+                <div className="md:block hidden">
                     <h3 className="text-[30px] !font-[100]">Service Time</h3>
                 </div>
-                <div className="hidden">
+                <div className="md:block hidden">
                     <h3 className="text-[30px] !font-[100]">[Section 4]</h3>
                 </div>
                 

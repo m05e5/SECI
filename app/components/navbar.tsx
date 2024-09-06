@@ -81,14 +81,14 @@ export default function NavBar() {
             >
               <div className="py-1">
                 <p className="block px-1 font-bold pt-2 text-[12px] text-gray-700">
-                  Edit
+                  Littorale
                 </p>
                 <MenuItem>
                   <a
                     href="#"
                     className="block px-4 py-1 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                   >
-                    Edit
+                    Edea
                   </a>
                 </MenuItem>
                 <MenuItem>
@@ -96,7 +96,7 @@ export default function NavBar() {
                     href="#"
                     className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                   >
-                    Duplicate
+                    Bonamoussadi
                   </a>
                 </MenuItem>
               </div>
@@ -106,7 +106,7 @@ export default function NavBar() {
                     href="#"
                     className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                   >
-                    Archive
+                    [text]
                   </a>
                 </MenuItem>
                 <MenuItem>
@@ -114,38 +114,11 @@ export default function NavBar() {
                     href="#"
                     className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                   >
-                    Move
+                    [text]
                   </a>
                 </MenuItem>
               </div>
-              <div className="py-1">
-                <MenuItem>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
-                  >
-                    Share
-                  </a>
-                </MenuItem>
-                <MenuItem>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
-                  >
-                    Add to favorites
-                  </a>
-                </MenuItem>
-              </div>
-              <div className="py-1">
-                <MenuItem>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
-                  >
-                    Delete
-                  </a>
-                </MenuItem>
-              </div>
+
             </MenuItems>
           </Menu>
           <LocalSwitch />
