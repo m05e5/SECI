@@ -12,7 +12,6 @@ export default function NavBar() {
   const navLinks = [
     { name: t('about'), href: "/about" },
     { name: t('ourPrograms'), href: "/ourPrograms" },
-    { name: "Out Team", href: "/ourTeam" },
     { name: t('watchOnline'), href: "/watchOnline"},
     { name: t('events'), href: "/events" },
     { name: t('contact'), href: "/contact" },
