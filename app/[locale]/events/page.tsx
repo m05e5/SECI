@@ -1,9 +1,9 @@
-import ImagedWrapper from "../../components/ImagedWrapper";
+import HeadImagedWrapper from "../../components/shared/HeadImagedWrapper";
 
 export default function Events() {
   return (
     <div>
-      <ImagedWrapper
+      <HeadImagedWrapper
         image={"/assets/bg_worship.jpg"}
         className="bg-cover  min-h-[500px] bg-no-repeat w-full flex items-end "
       >
@@ -14,7 +14,7 @@ export default function Events() {
             discipleship. They are dedicated to nurturing and guiding
           </p>
         </div>
-      </ImagedWrapper>
+      </HeadImagedWrapper>
     </div>
   );
 }

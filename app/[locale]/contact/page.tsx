@@ -1,16 +1,14 @@
 "use client";
-import { FaceFrownIcon } from "@heroicons/react/16/solid";
 import ContentWrapper from "../../components/ContentWrapper";
-import ImagedWrapper from "../../components/ImagedWrapper";
+import HeadImagedWrapper from "../../components/shared/HeadImagedWrapper";
 // import { APIProvider } from "@vis.gl/react-google-maps";
-import CustomMap from "../../components/MapComponent";
 import { Facebook, WhatsApp } from "@mui/icons-material";
 import BlackButton from "@/app/components/BlackButton";
 
 export default function Contact() {
   return (
     <div className=" flex flex-col gap-8">
-      <ImagedWrapper
+      <HeadImagedWrapper
         image={"/assets/biblebg.jpg"}
         className="bg-cover  min-h-[500px] bg-no-repeat w-full flex items-end "
       >
@@ -24,7 +22,7 @@ export default function Contact() {
             document or a typeface without relying
           </p>
         </div>
-      </ImagedWrapper>
+      </HeadImagedWrapper>
 
       <ContentWrapper className="border-b flex-col md:flex-row border-gray-900/10 py-12 gap-5">
         <div className="w-full md:w-4/12">

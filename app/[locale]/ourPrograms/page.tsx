@@ -1,11 +1,11 @@
 import ContentWrapper from "../../components/ContentWrapper";
-import ImagedWrapper from "../../components/ImagedWrapper";
+import HeadImagedWrapper from "../../components/shared/HeadImagedWrapper";
 import ProgramCard from "../../components/ProgramCard";
 
 export default function page() {
   return (
     <div>
-      <ImagedWrapper
+      <HeadImagedWrapper
         image={"/assets/bg2.png"}
         className="bg-cover  min-h-[500px] bg-no-repeat w-full flex items-end "
       >
@@ -18,7 +18,7 @@ export default function page() {
             discipleship. They are dedicated to nurturing and guiding
           </p>
         </div>
-      </ImagedWrapper>
+      </HeadImagedWrapper>
       <ContentWrapper className="flex gap-5 my-10 px-5 flex-wrap !max-w-[1100px]">
         <ProgramCard 
             image="/assets/bible_studies.jpg" 

@@ -1,11 +1,11 @@
-"use client"
+"use client";
 import ContentWrapper from "../components/ContentWrapper";
 import { useTranslations } from "use-intl";
-
-
+import HomeCard from "../components/HomeCard";
+import ImageBGWrapper from "../components/shared/ImageBGWrapper";
 
 export default function Home() {
-  const t = useTranslations("HomePage")
+  const t = useTranslations("HomePage");
   return (
     <main className=" flex flex-col gap-5">
       {/* <div className="bg-fill "> */}
@@ -37,14 +37,14 @@ export default function Home() {
             cornerstone of Jesus Christ.
           </p>
         </div>
-        <img className="w-full md:w-5/12" src={"/assets/rectangle.jpg"} alt="content" />
+        <img
+          className="w-full md:w-5/12"
+          src={"/assets/rectangle.jpg"}
+          alt="content"
+        />
       </ContentWrapper>
-
-
-
-      <div className="relative bg-fixed bg-cover bg-[url('/assets/bible_studies.jpg')] min-h-[400px] bg-no-repeat w-full flex items-center justify-center ">
-        <div className="absolute inset-0 bg-black opacity-50"/>
-        {/* Dark overlay */}
+      
+      <ImageBGWrapper image="/assets/bible_studies.jpg" fixed>
         <div className=" flex flex-col gap-5 text-white z-10 !font-[100] text-center ">
           <h3 className="text-[40px]">JOIN A LIFE GROUP</h3>
           <p className="leading-loose max-w-[700px]  ">
@@ -54,7 +54,34 @@ export default function Home() {
             person, we also offer a selection of Zoom sessions for our teens.
           </p>
         </div>
-      </div>
+      </ImageBGWrapper>
+
+      <ContentWrapper className="flex flex-col items-center md:items-start gap-5 md:gap-[50px] !max-w-[1350px]  w-full my-10 mb-[100px]">
+        <h2 className="text-center w-full text-[40px] !font-[100]">
+          {" "}
+          Some of our events{" "}
+        </h2>
+        {/* <img src={'https://s3.amazonaws.com/primuslearning.prod/resources/images/waveOrange.png'} alt='square' className='absolute top-36 right-10 w-[150px] h-auto' /> */}
+        <HomeCard
+          title="Text text text"
+          image="/assets/rectangle.jpg"
+          description="individuals within Cornerstone. While most gatherings occur in
+              person, we also offer a selection of Zoom sessions for our teens."
+        />
+        <HomeCard
+          right
+          title="Text text text"
+          image="/assets/rectangle.jpg"
+          description="individuals within Cornerstone. While most gatherings occur in
+              person, we also offer a selection of Zoom sessions for our teens."
+        />
+        <HomeCard
+          title="Text text text"
+          image="/assets/rectangle.jpg"
+          description="individuals within Cornerstone. While most gatherings occur in
+              person, we also offer a selection of Zoom sessions for our teens."
+        />
+      </ContentWrapper>
 
       <ContentWrapper
         className={`w-full flex-col md:flex-row gap-5 py-10 justify-between`}
