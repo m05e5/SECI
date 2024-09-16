@@ -5,6 +5,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { useTranslations } from "next-intl";
 import LocalSwitch from "./LocalSwitch";
 import { Link } from "@/i18n/routing";
+import { Close } from "@mui/icons-material";
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -36,6 +37,12 @@ export default function NavBar() {
     }
   ]
 
+  const [openMobileMenu, setOpenMobileMenu] = useState(false)
+
+  const toggleMenu = () => {
+    setOpenMobileMenu(!openMobileMenu)
+  }
+
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -52,7 +59,7 @@ export default function NavBar() {
       >
         <Link href={"/"}>logo</Link>
 
-        <div  id="menu-toggle" className="block lg:hidden">
+        <div onClick={() => toggleMenu()}  id="menu-toggle" className="block lg:hidden">
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
@@ -74,7 +81,7 @@ export default function NavBar() {
           <Menu as="div" className="relative inline-block text-left">
             <div>
               <MenuButton className="flex items-center gap-2">
-                {t('locations')}
+                {t('ourChurches')}
                 <svg className="w-2.5 h-2.5 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                 </svg>
@@ -108,6 +115,25 @@ export default function NavBar() {
             </MenuItems>
           </Menu>
           <LocalSwitch />
+        </div>
+      </div>
+      <div className={ ` h-screen transition-all duration-500 fixed z-[100] flex flex-col top-0 overflow-hidden left-0 ${ openMobileMenu ?  "w-full bg-[#888888] text-white" : "w-0 bg-transparent text-transparent"}  `}>
+        <div className="flex items-center justify-between w-full  h-[100px] px-10">
+          <Link href={"/"}>logo</Link>
+          <Close onClick={() => toggleMenu()} />
+        </div>
+        <div className="flex flex-col gap-10 text-[30px] !font-[100] grow items-center justify-center">
+            {navLinks.map((link) => {
+              return (
+                <Link
+                  onClick={() => toggleMenu()}
+                  href={link.href}
+                  key={link.name}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
         </div>
       </div>
     </div>

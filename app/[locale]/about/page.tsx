@@ -58,6 +58,34 @@ export default function About() {
           <b className="text-[40px]">Jean 3:16</b>
         </ContentWrapper>
       </ImageBGWrapper>
+      <ContentWrapper
+        className={`w-full flex-col md:flex-row gap-5 py-24 justify-between`}
+      >
+        
+        <div className="w-full md:w-6/12 flex flex-col h-full gap-5">
+          <h2 className="text-[35px] !font-[600]">L’amour d’un Dieu fidèle</h2>
+          <p className=" ">
+            Come experience the joy of belonging to a faith community that
+            values community, worship, and purpose. Whether you're exploring
+            your faith journey or seeking a place to belong, you'll find a warm
+            welcome at Cornerstone. Together, let’s build lives on the
+            cornerstone of Jesus Christ. <br/> <br/> Come experience the joy of belonging to a faith community that
+            values community, worship, and purpose. Whether you're exploring
+            your faith journey or seeking a place to belong, you'll find a warm
+            welcome at Cornerstone. Together, let’s build lives on the
+            cornerstone of Jesus Christ. Come experience the joy of belonging to a faith community that
+            values community, worship, and purpose. Whether you're exploring
+            your faith journey or seeking a place to belong, you'll find a warm
+            welcome at Cornerstone. Together, let’s build lives on the
+            cornerstone of Jesus Christ. <br/> <br/>Come experience the joy of belonging to a faith community that
+            values community, worship, and purpose. Whether you're exploring
+            your faith journey or seeking a place to belong, you'll find a warm
+            welcome at Cornerstone. Together, let’s build lives on the
+            cornerstone of Jesus Christ.
+          </p>
+        </div>
+        <img className="w-full md:w-6/12" src={"/assets/bigcard1.jpg"} alt="content" />
+      </ContentWrapper>
     </div>
     )
 }
