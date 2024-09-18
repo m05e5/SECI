@@ -102,12 +102,11 @@ export default function NavBar() {
                     {location.subLocations.map((subLocation) => {
                        return (
                         <MenuItem>
-                          <a
-                            href="#"
+                          <Link href={`/ourChurches/${subLocation.name}`}
                             className="block px-4 py-1 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                           >
                             {subLocation.name}
-                          </a>
+                          </Link>
                         </MenuItem>
                        );})}
                   </div>
